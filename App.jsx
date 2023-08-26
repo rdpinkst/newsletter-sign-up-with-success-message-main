@@ -1,10 +1,9 @@
 function App() {
     return (
-        <div>
-            <h1>Working</h1>
-            <SignupForm />
-            {/* <SuccessSub /> */}
-        </div>
+      <div>
+        <SignupForm />
+        {/* <SuccessSub /> */}
+      </div>
     )
 }
 

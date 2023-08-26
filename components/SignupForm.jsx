@@ -1,6 +1,6 @@
 function SignupForm() {
     return (
-      <div>
+      <div className="w-full h-96">
 
         <h1>Stay updated!</h1>
       

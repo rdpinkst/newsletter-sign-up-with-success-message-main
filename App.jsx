@@ -3,7 +3,7 @@ function App() {
         <div>
             <h1>Working</h1>
             <SignupForm />
-            <SuccessSub />
+            {/* <SuccessSub /> */}
         </div>
     )
 }

@@ -15,7 +15,7 @@ function SignupForm() {
           <form action="#" className="flex flex-col"> 
             <label className="block text-sm font-bold mb-2" htmlFor="email">Email address</label>
             <input className="appearance-none border rounded w-full px-2 py-3 mb-6" type="email" name="email" id="email" placeholder="email@company.com" />
-            <button className="bg-[#242742] px-2 py-3 rounded w-full text-white">Subscribe to monthly newsletter</button>
+            <button className="bg-[#242742] font-bold px-2 py-3 rounded w-full text-white hover:bg-gradient-to-r from-[#ff6257] to-[#F28C28]">Subscribe to monthly newsletter</button>
           </form>
         </div>
         <div className="h-50 w-50">

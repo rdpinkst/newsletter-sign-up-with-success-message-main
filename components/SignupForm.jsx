@@ -4,7 +4,6 @@ function SignupForm({ signup, setSignup }) {
   function validateEmail(e) {
     e.preventDefault();
     if(email === "") {
-      console.log("return")
       return;
     }
     setEmail(prevEmail => "")
@@ -13,10 +12,11 @@ function SignupForm({ signup, setSignup }) {
   }
 
     return (
-      <div className="flex border border-black rounded-3xl bg-white w-50">
+      <div className="flex border border-black rounded-3xl bg-white w-50 
+           max-[375px]:flex-col-reverse max-[375px]:w-full max-[375px]:border-none">
         <div className="w-50 h-50 flex flex-col justify-center m-10">
   
-          <h1 className="font-bold text-5xl mb-4 mr-10 ml-10">Stay updated!</h1>
+          <h1 className="font-bold text-5xl mb-4 mr-10 ml-10 max-[375px]:text-3xl max-[375px]:mr-2 max-[375px]:ml-2">Stay updated!</h1>
         
           <p className="mb-4 text-[#9294a0]">Join 60,000+ product managers receiving monthly updates on:</p>
           <ul className="list-image-[url(../assets/images/icon-list.svg)] list-inside mb-4">
@@ -27,15 +27,20 @@ function SignupForm({ signup, setSignup }) {
           
           <form action="#" className="flex flex-col" onSubmit={validateEmail}> 
             <label className="block text-sm font-bold mb-2" htmlFor="email">Email address</label>
-            <input className="appearance-none border rounded w-full px-2 py-3 mb-6" 
+            <input className="appearance-none border rounded w-full px-2 py-3 mb-6 cursor-pointer" 
                     type="email" name="email" id="email" placeholder="email@company.com" 
                     value={email} onChange={(e) => setEmail(e.target.value)} />
-            <button className="bg-[#242742] font-bold px-2 py-3 rounded w-full text-white hover:bg-gradient-to-r from-[#ff6257] to-[#F28C28]"
+            <button className="bg-[#242742] font-bold px-2 py-3 rounded w-full 
+                    text-white hover:bg-gradient-to-r from-[#ff6257] to-[#F28C28] hover:shadow-[#ff6257]-500/50"
                     type="submit">Subscribe to monthly newsletter</button>
           </form>
         </div>
         <div className="h-50 w-50">
-          <img className="m-4" src="../assets/images/illustration-sign-up-desktop.svg" alt="" />
+          <picture>
+            <source className="w-full" srcSet="../assets/images/illustration-sign-up-mobile.svg" media="max-width: 375px" />
+            <img className="m-4" src="../assets/images/illustration-sign-up-desktop.svg" alt="" />
+          </picture>
+          
         </div>
       </div>
     )

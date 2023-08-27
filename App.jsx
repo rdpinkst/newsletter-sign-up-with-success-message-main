@@ -1,10 +1,14 @@
+const { useState } = React;
+
 function App() {
-    return (
-      <div>
-        <SignupForm />
-        {/* <SuccessSub /> */}
-      </div>
-    )
+  const [signup, setSignup] = useState(true);
+
+  if(signup) {
+    return <SignupForm  signup={signup} setSignup={setSignup} />
+  }
+  else {
+    return <SuccessSub signup={signup} setSignup={setSignup} />
+  }
 }
 
 const domApp = document.getElementById("app");

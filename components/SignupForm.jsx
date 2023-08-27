@@ -1,4 +1,17 @@
-function SignupForm() {
+function SignupForm({ signup, setSignup }) {
+  const [email, setEmail] = useState("");
+
+  function validateEmail(e) {
+    e.preventDefault();
+    if(email === "") {
+      console.log("return")
+      return;
+    }
+    setEmail(prevEmail => "")
+    setSignup(prevState => !prevState)
+    
+  }
+
     return (
       <div className="flex border border-black rounded-3xl bg-white w-50">
         <div className="w-50 h-50 flex flex-col justify-center m-10">
@@ -12,10 +25,13 @@ function SignupForm() {
             <li className="mb-2">And much more!</li>  
           </ul>
           
-          <form action="#" className="flex flex-col"> 
+          <form action="#" className="flex flex-col" onSubmit={validateEmail}> 
             <label className="block text-sm font-bold mb-2" htmlFor="email">Email address</label>
-            <input className="appearance-none border rounded w-full px-2 py-3 mb-6" type="email" name="email" id="email" placeholder="email@company.com" />
-            <button className="bg-[#242742] font-bold px-2 py-3 rounded w-full text-white hover:bg-gradient-to-r from-[#ff6257] to-[#F28C28]">Subscribe to monthly newsletter</button>
+            <input className="appearance-none border rounded w-full px-2 py-3 mb-6" 
+                    type="email" name="email" id="email" placeholder="email@company.com" 
+                    value={email} onChange={(e) => setEmail(e.target.value)} />
+            <button className="bg-[#242742] font-bold px-2 py-3 rounded w-full text-white hover:bg-gradient-to-r from-[#ff6257] to-[#F28C28]"
+                    type="submit">Subscribe to monthly newsletter</button>
           </form>
         </div>
         <div className="h-50 w-50">

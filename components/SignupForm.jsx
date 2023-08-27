@@ -13,16 +13,16 @@ function SignupForm({ signup, setSignup }) {
 
     return (
       <div className="flex border border-black rounded-3xl bg-white w-50 
-           max-[375px]:flex-col-reverse max-[375px]:w-full max-[375px]:border-none">
-        <div className="w-50 h-50 flex flex-col justify-center m-10">
+           max-[375px]:flex-col-reverse max-[375px]:w-full max-[375px]:border-none max-[375px]:rounded-none">
+        <div className="w-50 h-50 flex flex-col justify-center m-10 max-[375px]:ml-4 max-[375px]:mr-4">
   
-          <h1 className="font-bold text-5xl mb-4 mr-10 ml-10 max-[375px]:text-3xl max-[375px]:mr-2 max-[375px]:ml-2">Stay updated!</h1>
+          <h1 className="font-bold text-5xl mb-4 mr-10 ml-10 max-[375px]:text-3xl max-[375px]:ml-0">Stay updated!</h1>
         
           <p className="mb-4 text-[#9294a0]">Join 60,000+ product managers receiving monthly updates on:</p>
           <ul className="list-image-[url(../assets/images/icon-list.svg)] list-inside mb-4">
-            <li className="mb-2">Product discovery and building what matters</li>
-            <li className="mb-2">Measuring to ensure updates are a success</li>
-            <li className="mb-2">And much more!</li>  
+            <li className="mb-2"><span className="ml-2">Product discovery and building what matters</span></li>
+            <li className="mb-2"><span className="ml-2">Measuring to ensure updates are a success</span></li>
+            <li className="mb-2"><span className="ml-2">And much more!</span></li>  
           </ul>
           
           <form action="#" className="flex flex-col" onSubmit={validateEmail}> 
@@ -37,8 +37,11 @@ function SignupForm({ signup, setSignup }) {
         </div>
         <div className="h-50 w-50">
           <picture>
-            <source className="w-full" srcSet="../assets/images/illustration-sign-up-mobile.svg" media="max-width: 375px" />
-            <img className="m-4" src="../assets/images/illustration-sign-up-desktop.svg" alt="" />
+            <source className="w-full" 
+              srcSet="../assets/images/illustration-sign-up-mobile.svg" 
+              media="(max-width: 375px)"
+              sizes="375px" />
+            <img className="m-4 max-[375px]:m-0" src="../assets/images/illustration-sign-up-desktop.svg" alt="" />
           </picture>
           
         </div>

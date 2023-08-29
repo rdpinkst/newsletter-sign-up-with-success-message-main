@@ -18,7 +18,7 @@ function SignupForm({ signup, setSignup }) {
   
           <h1 className="font-bold text-5xl mb-4 mr-10 ml-10 max-[375px]:text-3xl max-[375px]:ml-0">Stay updated!</h1>
         
-          <p className="mb-4 text-[#9294a0]">Join 60,000+ product managers receiving monthly updates on:</p>
+          <p className="mb-4">Join 60,000+ product managers receiving monthly updates on:</p>
           <ul className="list-image-[url(../assets/images/icon-list.svg)] list-inside mb-4">
             <li className="mb-2"><span className="ml-2">Product discovery and building what matters</span></li>
             <li className="mb-2"><span className="ml-2">Measuring to ensure updates are a success</span></li>

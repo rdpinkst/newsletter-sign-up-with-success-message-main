@@ -19,10 +19,15 @@ function SignupForm({ signup, setSignup }) {
           <h1 className="font-bold text-5xl mb-4 mr-10 ml-10 max-[375px]:text-3xl max-[375px]:ml-0">Stay updated!</h1>
         
           <p className="mb-4">Join 60,000+ product managers receiving monthly updates on:</p>
-          <ul className="list-image-[url(../assets/images/icon-list.svg)] list-inside mb-4">
-            <li className="mb-2"><span className="ml-2">Product discovery and building what matters</span></li>
-            <li className="mb-2"><span className="ml-2">Measuring to ensure updates are a success</span></li>
-            <li className="mb-2"><span className="ml-2">And much more!</span></li>  
+          <ul className="list-image-none list-inside mb-4">
+            {/* <li className="mb-2"><span className="ml-2">Product discovery and building what matters</span></li> */}
+            <li className="flex mb-2"><img className="mr-2" src="../assets/images/icon-list.svg" /><span>Product discovery and building what matters</span></li>
+
+            {/* <li className="mb-2"><span className="ml-2">Measuring to ensure updates are a success</span></li> */}
+            <li className="flex mb-2"><img className="mr-2" src="../assets/images/icon-list.svg" /><span>Measuring to ensure updates are a success</span></li>
+            {/* <li className="mb-2"><span className="ml-2">And much more!</span></li>   */}
+            <li className="flex mb-2"><img className="mr-2" src="../assets/images/icon-list.svg" /><span>And much more!</span></li>
+
           </ul>
           
           <form action="#" className="flex flex-col" onSubmit={validateEmail}> 

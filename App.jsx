@@ -1,7 +1,7 @@
 const { useState } = React;
 
 function App() {
-  const [signup, setSignup] = useState(false);
+  const [signup, setSignup] = useState(true);
 
   if(signup) {
     return <SignupForm  signup={signup} setSignup={setSignup} />

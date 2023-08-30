@@ -30,9 +30,9 @@ function SignupForm({ signup, setSignup }) {
 
           </ul>
           
-          <form action="#" className="flex flex-col max-[375px]:mb-6" onSubmit={validateEmail}> 
-            <label className="block text-sm font-bold mb-2" htmlFor="email">Email address</label>
-            <input className="appearance-none border rounded w-full px-2 py-3 mb-6 cursor-pointer" 
+          <form action="#" className="flex flex-col" onSubmit={validateEmail}> 
+            <label className="block text-sm font-bold mb-2 max-[375px]:text-xs" htmlFor="email">Email address</label>
+            <input className="appearance-none border rounded w-full px-2 py-3 mb-6 cursor-pointer max-[375px]:rounded-lg" 
                     type="email" name="email" id="email" placeholder="email@company.com" 
                     value={email} onChange={(e) => setEmail(e.target.value)} />
             <button className="bg-[#242742] font-bold px-2 py-3 rounded w-full 

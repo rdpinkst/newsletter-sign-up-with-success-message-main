@@ -1,14 +1,22 @@
-function SignupForm({ signup, setSignup }) {
-  const [email, setEmail] = useState("");
+function SignupForm({ signup, setSignup, email, setEmail }) {
+  const [error, setError] = useState("");
 
   function validateEmail(e) {
     e.preventDefault();
     if(email === "") {
+      setError("Email address required.")
       return;
     }
-    setEmail(prevEmail => "")
-    setSignup(prevState => !prevState)
-    
+    setSignup(prevState => !prevState) 
+  }
+  function inputEmail(e) {
+    let currError = error;
+    setEmail(prevEmail => {
+      currError = "";
+      prevEmail = e.target.value;
+      return prevEmail;
+    });
+    setError(currError)
   }
 
     return (
@@ -28,9 +36,10 @@ function SignupForm({ signup, setSignup }) {
           
           <form action="#" className="flex flex-col" onSubmit={validateEmail}> 
             <label className="block text-sm font-bold mb-2 max-[375px]:text-xs" htmlFor="email">Email address</label>
-            <input className="appearance-none border rounded w-full px-2 py-3 mb-6 cursor-pointer max-[375px]:rounded-lg" 
+            <input className="appearance-none border rounded w-full px-2 py-3 mb-1 cursor-pointer max-[375px]:rounded-lg" 
                     type="email" name="email" id="email" placeholder="email@company.com" 
-                    value={email} onChange={(e) => setEmail(e.target.value)} />
+                    value={email} onChange={inputEmail} />
+            <small className="h-1 mb-6 text-red-800">{error}</small>
             <button className="bg-[#242742] font-bold px-2 py-4 rounded-lg w-full 
                     text-white hover:bg-gradient-to-r from-[#ff6257] to-[#F28C28] hover:shadow-[#ff6257]-500/50"
                     type="submit">Subscribe to monthly newsletter</button>

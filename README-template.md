@@ -20,6 +20,7 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 
 ## Overview
 
+
 ### The challenge
 
 Users should be able to:
@@ -50,17 +51,13 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
+This app was built using React and tailwindcss.  To start the build process I had to figure out how to add both React and tailwindcss to this project.  I chose to use the unpkg versions.  I then decided to start with the SignupForm component.  I did all the jsx, and once the jsx was done, styling was then completed by adding the tailwindcss classes.  This process was the repeated with SuccessSub.  Once the two components were looking like the design files, I worked on the active state hover affects with the buttons.  The mobile design was the next challenge undertaken, adding max-[375px] queries to classes where needed in the component.  
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
+- Tailwindcss
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 

@@ -1,3 +1,5 @@
+import mobileImage from "../assets/images/illustration-sign-up-mobile.svg"
+
 function SignupForm({ signup, setSignup, email, setEmail }) {
   const [error, setError] = useState("");
 
@@ -48,7 +50,8 @@ function SignupForm({ signup, setSignup, email, setEmail }) {
         <div className="w-50">
           <picture>
             <source className="w-full" 
-              srcSet="../assets/images/illustration-sign-up-mobile.svg" 
+              // srcSet="../assets/images/illustration-sign-up-mobile.svg" 
+              srcSet={mobileImage}
               media="(max-width: 850px)"
               sizes="850px" />
             <img className="m-4 max-w-none max-[850px]:m-0 max-[850px]:w-full" src="../assets/images/illustration-sign-up-desktop.svg" alt="" />

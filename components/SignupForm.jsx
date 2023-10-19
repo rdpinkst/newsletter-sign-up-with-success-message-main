@@ -28,9 +28,9 @@ function SignupForm({ signup, setSignup, email, setEmail }) {
         
           <p className="mb-4 text-lg max-[850px]:mb-5">Join 60,000+ product managers receiving monthly updates on:</p>
           <ul className="list-image-none text-lg list-inside mb-4 max-[850px]:mb-6">
-            <li className="flex mb-2 items-start"><img className="mr-4" src="../assets/images/icon-list.svg" /><span>Product discovery and building what matters</span></li>
-            <li className="flex mb-2 items-start"><img className="mr-4" src="../assets/images/icon-list.svg" /><span>Measuring to ensure updates are a success</span></li>
-            <li className="flex mb-2 items-start"><img className="mr-4" src="../assets/images/icon-list.svg" /><span>And much more!</span></li>
+            <li className="flex mb-2 items-start"><img className="mr-4" src="./assets/images/icon-list.svg" /><span>Product discovery and building what matters</span></li>
+            <li className="flex mb-2 items-start"><img className="mr-4" src="./assets/images/icon-list.svg" /><span>Measuring to ensure updates are a success</span></li>
+            <li className="flex mb-2 items-start"><img className="mr-4" src="./assets/images/icon-list.svg" /><span>And much more!</span></li>
 
           </ul>
           
@@ -48,10 +48,10 @@ function SignupForm({ signup, setSignup, email, setEmail }) {
         <div className="w-50">
           <picture>
             <source className="w-full" 
-              srcSet="../assets/images/illustration-sign-up-mobile.svg" 
+              srcSet="./assets/images/illustration-sign-up-mobile.svg" 
               media="(max-width: 850px)"
               sizes="850px" />
-            <img className="m-4 max-w-none max-[850px]:m-0 max-[850px]:w-full" src="../assets/images/illustration-sign-up-desktop.svg" alt="" />
+            <img className="m-4 max-w-none max-[850px]:m-0 max-[850px]:w-full" src="./assets/images/illustration-sign-up-desktop.svg" alt="" />
           </picture>
           
         </div>
